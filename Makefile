@@ -1,4 +1,8 @@
+# Set up variables specific to this analysis
+LABNUMBER=0
 manuscript = report
+
+# LaTeX
 latexopt = -file-line-error -halt-on-error
 
 # Build the PDF of the lab report from the source files
@@ -25,6 +29,11 @@ env : $(CONDA_REQUIREMENTS)
 # Get/download necessary data
 data :
 	echo "WARNING: make data has not yet been implemented."
+
+## ieee		: Download IEEE TeX class
+ieee :
+	@echo "Downloading IEEETran.cls..."
+	wget http://mirrors.ctan.org/macros/latex/contrib/IEEEtran/IEEEtran.cls
 
 # Validate that downloaded data is not corrupted
 validate :
@@ -65,4 +74,4 @@ help : Makefile
 	@sed -n 's/^##//p' $<
 
 # Make keyword for commands that don't have dependencies
-.PHONY : env test data validate analysis uninstall clean help
+.PHONY : env test data validate analysis uninstall clean help ieee

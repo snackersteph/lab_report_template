@@ -1,3 +1,10 @@
+# TeX stuff
+*.aux
+*.bbl
+*.blg
+*.pdf
+*.cls
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
