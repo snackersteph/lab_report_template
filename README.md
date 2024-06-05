@@ -44,3 +44,9 @@ git init
 git fetch --depth=1 -n https://github.com/kjbilton/lab_report_template.git
 git reset --hard $(git commit-tree FETCH_HEAD^{tree} -m "initial commit")
 ```
+
+## Next steps
+Continue leveling up by meeting me IRL! To initiate a meetup, make a PR to any of the repos on my github :)
+Extra bonus points if cute cat pics are included
+![mega cute cat pic of carbs](assets/carbs_the_cat.jpg)
+
